@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Depth Guide to Call Options</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>In-Depth Guide to Call Options</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calls.html">Call Options</a></li>
+                <li><a href="puts.html">Put Options</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- TradingView Ticker Widget -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+                <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                    <span class="blue-text">Track all markets on TradingView</span>
+                </a>
+            </div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>{
+                "symbols": [
+                    {
+                        "proName": "FOREXCOM:SPXUSD",
+                        "title": "S&P 500 Index"
+                    },
+                    {
+                        "proName": "FOREXCOM:NSXUSD",
+                        "title": "US 100 Cash CFD"
+                    },
+                    {
+                        "proName": "FX_IDC:EURUSD",
+                        "title": "EUR to USD"
+                    },
+                    {
+                        "proName": "BITSTAMP:BTCUSD",
+                        "title": "Bitcoin"
+                    },
+                    {
+                        "proName": "BITSTAMP:ETHUSD",
+                        "title": "Ethereum"
+                    }
+                ],
+                "isTransparent": false,
+                "showSymbolLogo": true,
+                "colorTheme": "light",
+                "locale": "en"
+            }</script>
+        </div>
+        <!-- End of TradingView Ticker Widget -->
+        <section>
+            <h2><i class="fas fa-question-circle"></i> What is a Call Option?</h2>
+            <div class="callout">
+                <strong>Definition:</strong> A call option gives the holder the right, but not the obligation, to buy an underlying asset at a specified strike price before expiration.
+            </div>
+            <p>Call options are typically used when investors expect the price of the underlying asset to increase. Buying a call allows them to potentially purchase at a lower price than the future market value.</p>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-cogs"></i> How Call Options Work</h2>
+            <p>When you buy a call option, you’re betting that the asset’s price will rise above the strike price before the option expires. If it does, you can exercise the option to buy at the lower strike price and potentially sell at a profit.</p>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-chart-line"></i> Understanding Graph Trends for Call Options</h2>
+            <p>Graph trends in call options are often associated with price movement patterns. Here are a few key trends:</p>
+            <ul>
+                <li>Uptrend: A continuous increase in price over time, ideal for call options.</li>
+                <li>Breakout: Price breaking through a resistance level, signaling potential further rise.</li>
+                <li>Reversal: When a downtrend reverses, it can indicate a buying opportunity.</li>
+                <li>Consolidation: Price movement in a narrow range, often leading to a breakout.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Elite Options Education. All rights reserved.</p>
+        <p>
+            <a href="mailto:info@eliteoptions.com"><i class="fas fa-envelope"></i> Contact Us</a>
+            <span> | </span>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </p>
+    </footer>
+</body>
+</html>

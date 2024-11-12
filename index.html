@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Options Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Elite Options Education</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="calls.html">Call Options</a></li>
+                <li><a href="puts.html">Put Options</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- TradingView Ticker Widget -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+                <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                    <span class="blue-text">Track all markets on TradingView</span>
+                </a>
+            </div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+            {
+                "symbols": [
+                    {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500 Index"},
+                    {"proName": "FOREXCOM:NSXUSD", "title": "US 100 Cash CFD"},
+                    {"proName": "FX_IDC:EURUSD", "title": "EUR to USD"},
+                    {"proName": "BITSTAMP:BTCUSD", "title": "Bitcoin"},
+                    {"proName": "BITSTAMP:ETHUSD", "title": "Ethereum"}
+                ],
+                "isTransparent": false,
+                "showSymbolLogo": true,
+                "colorTheme": "light",
+                "locale": "en"
+            }</script>
+        </div>
+        <!-- End of TradingView Ticker Widget -->
+
+        <section class="two-column">
+            <!-- Hero Section -->
+            <div class="content">
+                <h2>Your Journey to Mastering Options Starts Here</h2>
+                <p>Unlock the potential of options trading with our expert resources. From beginner guides to in-depth strategy analysis, we provide everything you need to succeed in the world of options.</p>
+                <div class="buttons">
+                    <a href="calls.html" class="button">Learn About Call Options</a>
+                    <a href="puts.html" class="button">Explore Put Options</a>
+                </div>
+            </div>
+
+            <!-- TradingView Interactive Chart Widget -->
+            <div class="tradingview-widget-container">
+                <div id="tradingview_f5f07"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                new TradingView.widget({
+                    "width": "100%",
+                    "height": 500,
+                    "symbol": "NASDAQ:AAPL",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "light",
+                    "style": "1",
+                    "locale": "en",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "hide_top_toolbar": false,
+                    "withdateranges": true,
+                    "allow_symbol_change": true,
+                    "container_id": "tradingview_f5f07"
+                });
+                </script>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At Elite Options Education, our mission is to empower you with the knowledge and tools needed to navigate the options market with confidence. Whether you’re a complete beginner or an experienced trader, our goal is to provide high-quality, accessible content to help you achieve your financial goals.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Elite Options Education. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:info@eliteoptions.com">info@eliteoptions.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

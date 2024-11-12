@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options Profit/Loss Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Options Profit/Loss Calculator</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calls.html">Call Options</a></li>
+                <li><a href="puts.html">Put Options</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- TradingView Ticker Widget -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+                <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                    <span class="blue-text">Track all markets on TradingView</span>
+                </a>
+            </div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>{
+                "symbols": [
+                    {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500 Index"},
+                    {"proName": "FOREXCOM:NSXUSD", "title": "US 100 Cash CFD"},
+                    {"proName": "FX_IDC:EURUSD", "title": "EUR to USD"},
+                    {"proName": "BITSTAMP:BTCUSD", "title": "Bitcoin"},
+                    {"proName": "BITSTAMP:ETHUSD", "title": "Ethereum"}
+                ],
+                "isTransparent": false,
+                "showSymbolLogo": true,
+                "colorTheme": "light",
+                "locale": "en"
+            }</script>
+        </div>
+        <!-- End of TradingView Ticker Widget -->
+
+        <section class="two-column">
+            <!-- Calculator Section -->
+            <div class="content">
+                <h2>Calculate Your Profit or Loss</h2>
+                <p>Fill out the form below to see potential profit or loss based on your option type, strike price, market price, and contract details.</p>
+                <form id="optionsCalculator">
+                    <div class="form-group">
+                        <label for="optionType">Option Type:</label>
+                        <select id="optionType" required>
+                            <option value="call">Call Option</option>
+                            <option value="put">Put Option</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="strikePrice">Strike Price:</label>
+                        <input type="number" id="strikePrice" placeholder="e.g., 50" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="marketPrice">Market Price:</label>
+                        <input type="number" id="marketPrice" placeholder="e.g., 55" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contractPrice">Price Per Contract:</label>
+                        <input type="number" id="contractPrice" placeholder="e.g., 2.50" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numContracts">Number of Contracts:</label>
+                        <input type="number" id="numContracts" placeholder="e.g., 10" required>
+                    </div>
+
+                    <button type="button" onclick="calculateProfit()">Calculate Profit/Loss</button>
+                </form>
+                <div id="result"></div>
+            </div>
+
+            <!-- TradingView Interactive Chart Widget -->
+            <div class="tradingview-widget-container">
+                <div id="tradingview_f5f07"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">new TradingView.widget({
+                        "width": "100%",
+                        "height": 500,
+                        "symbol": "NASDAQ:AAPL",
+                        "interval": "D",
+                        "timezone": "Etc/UTC",
+                        "theme": "light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "hide_top_toolbar": false,
+                        "withdateranges": true,
+                        "allow_symbol_change": true,
+                        "container_id": "tradingview_f5f07"
+                    });</script>
+            </div>
+            <!-- End of TradingView Interactive Chart Widget -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Elite Options Education. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:info@eliteoptions.com">info@eliteoptions.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

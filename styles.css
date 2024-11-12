@@ -1,0 +1,307 @@
+﻿/* General Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #4caf7a;
+    padding: 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    z-index: 1000;
+}
+
+    header h1 {
+        font-size: 2.2em;
+        font-weight: 700;
+        color: #ffffff;
+    }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5em;
+}
+
+    nav ul li {
+        margin: 0 1em;
+    }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+            nav ul li a:hover {
+                color: #a8dfc1;
+            }
+
+/* Main Content Styling */
+main {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Two-column layout for main content with improved spacing */
+.two-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: start;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+    .two-column .content,
+    .two-column .tradingview-widget-container {
+        flex: 1;
+        min-width: 45%;
+    }
+
+section h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #4caf7a;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+    .buttons a {
+        background-color: #4caf7a;
+        color: #ffffff;
+        padding: 0.8em 2em;
+        border-radius: 30px;
+        font-size: 1.1em;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+        .buttons a:hover {
+            background-color: #388e5a;
+        }
+
+/* Styling for the TradingView widgets */
+.tradingview-widget-container {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tradingview-widget-container__widget {
+    width: 100%;
+}
+
+/* Calculator Styling */
+#calculator {
+    display: flex;
+    gap: 2em;
+    align-items: start;
+}
+
+    #calculator .form-section,
+    #calculator .chart-section {
+        flex: 1;
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 2em;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #calculator h2 {
+        font-size: 2em;
+        color: #4caf7a;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+#optionsCalculator {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.form-group {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-group label {
+        font-size: 1em;
+        color: #333;
+        margin-bottom: 0.5em;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 0.8em;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+#optionsCalculator button {
+    background-color: #4caf7a;
+    color: #ffffff;
+    padding: 0.8em 2em;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1em;
+}
+
+    #optionsCalculator button:hover {
+        background-color: #388e5a;
+    }
+
+#result {
+    margin-top: 1.5em;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #2f3e46;
+    line-height: 1.5;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #4caf7a;
+    color: #ffffff;
+    padding: 1.5em;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 2px solid #a8dfc1;
+}
+
+    footer a {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+/* Calculator Styling */
+#calculator {
+    background-color: #ffffff;
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 900px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+    #calculator h2 {
+        font-size: 2em;
+        color: #4caf7a;
+        margin-bottom: 1em;
+    }
+
+    #calculator p {
+        font-size: 1.1em;
+        color: #666;
+        margin-bottom: 1.5em;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/* Form styling */
+#optionsCalculator {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    min-width: 200px;
+}
+
+#optionsCalculator label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+#optionsCalculator input,
+#optionsCalculator select {
+    padding: 0.8em;
+    width: 100%;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+#optionsCalculator button {
+    background-color: #4caf7a;
+    color: #ffffff;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 1em;
+    width: 100%;
+    max-width: 300px;
+}
+
+    #optionsCalculator button:hover {
+        background-color: #388e5a;
+    }
+
+#result {
+    margin-top: 1.5em;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #2f3e46;
+    line-height: 1.5;
+}
