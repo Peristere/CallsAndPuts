@@ -1,8 +1,42 @@
-﻿/* General Reset and Base Styling */
+/* General Reset and Base Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Responsive design for screens 600px and below */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px; /* Increase base font size */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Smaller header font */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation vertically */
+    }
+
+    main {
+        padding: 1em; /* Reduce padding */
+    }
+
+    #calculator, #hero, #about {
+        padding: 1em; /* Reduce padding in sections */
+        margin: 1em 0;
+        box-shadow: none; /* Optional: simplify for mobile */
+    }
+
+    .buttons a {
+        padding: 0.6em 1em; /* Reduce button size */
+    }
+    /* Make the trading view chart occupy the full width */
+    .tradingview-widget-container {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 body {
@@ -129,6 +163,11 @@ section p {
 
 .tradingview-widget-container__widget {
     width: 100%;
+}
+
+.tradingview-widget-container {
+    max-width: 100%;
+    overflow: hidden;
 }
 
 /* Calculator Styling */
